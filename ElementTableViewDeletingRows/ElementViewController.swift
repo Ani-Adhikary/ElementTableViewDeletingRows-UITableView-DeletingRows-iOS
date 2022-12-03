@@ -70,10 +70,10 @@ extension ElementViewController: UITableViewDataSource {
         }
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             elements.remove(at: indexPath.row)
-            elementTableView.deleteRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
+            elementTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
     }
 
